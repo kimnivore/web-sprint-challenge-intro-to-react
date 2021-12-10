@@ -48,11 +48,11 @@ const StyledCharacter = styled.div`
 `;
 
 const Character = (props) => {
-    const { open } = props;
+    const { open, name, character} = props;
     return (
         <StyledCharacter>
-            <h2>{props.name}</h2>
-            <button onClick={() => open(props.character.name)}>
+            <h2>{name}</h2>
+            <button onClick={() => open(character.name)}>
             Details
             </button>
         </StyledCharacter>
