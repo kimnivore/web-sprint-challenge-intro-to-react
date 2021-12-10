@@ -34,11 +34,10 @@ export default function Details(props) {
 
       return (
           <StyledDetails>
-            
               {
                  details &&
                 <div>
-                 <h2>{details.name}</h2>
+                  <h2>{details.name}</h2>
                   <p>gender: {details.gender}</p>  
                   <p>height: {details.height}</p>
                   <p>mass: {details.mass}</p>
