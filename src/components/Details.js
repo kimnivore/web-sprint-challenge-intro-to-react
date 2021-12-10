@@ -14,33 +14,31 @@ const StyledDetails = styled.div`
     p {
         font-size: 1rem;
     }
-
 `;
 
-
 export default function Details(props) {
-    const {charId, close } = props;
-
+    const { close, charId } = props;
     const [details, setDetails] = useState(null);
 
     useEffect(() => {
-        axios
-        .get(`https://swapi.dev/api/people/`)
+        axios.get(`https://swapi.dev/api/people/`)
         .then(resp => {
-          console.log(resp);
-          setDetails(resp.data);
+          console.log(resp.data)
+          setDetails(resp.data.name)
         })
         .catch(err => {
-          console.error(err);
-        });
-      }, [charId]);
+          console.error(err)
+        })
+      }, [charId])
+
 
       return (
           <StyledDetails>
-              <h2>{details.name}</h2>
+            
               {
-                details &&
-                <>
+                 details &&
+                <div>
+                 <h2>{details.name}</h2>
                   <p>gender: {details.gender}</p>  
                   <p>height: {details.height}</p>
                   <p>mass: {details.mass}</p>
@@ -48,10 +46,12 @@ export default function Details(props) {
                   <p>Eye Color: {details.eye_color}</p>
                   <p>Hair Color: {details.hair_color} </p>
                   <p>Skin Color: {details.skin_color} </p>
-                </>
+                </div>
               }
+             
               <button onClick={close}>Close</button>
           </StyledDetails>
       )
 }
 
+// name, gender, height, mass, birth_year, eye_color, hair_color, skin_color, 
