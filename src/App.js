@@ -12,10 +12,10 @@ const App = () => {
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
 const [character, setCharacter] = useState([]);
-const [currentId, setCurrentId] = useState('');
+const [currentId, setCurrentId] = useState(null);
 
-const openDetails = charId => {
-  setCurrentId(charId)
+const openDetails = id => {
+  setCurrentId(id)
 }
 
 const closeDetails = () => {

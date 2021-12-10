@@ -48,8 +48,6 @@ const StyledCharacter = styled.div`
 `;
 
 const Character = (props) => {
-    const {name} = props;
-
     return (
         <StyledCharacter>
             <h2>{props.name}</h2>

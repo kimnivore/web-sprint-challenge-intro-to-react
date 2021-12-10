@@ -37,7 +37,7 @@ export default function Details(props) {
 
       return (
           <StyledDetails>
-              <h2>Details: </h2>
+              <h2>{details.name}</h2>
               {
                 details &&
                 <>
@@ -48,15 +48,7 @@ export default function Details(props) {
                   <p>Eye Color: {details.eye_color}</p>
                   <p>Hair Color: {details.hair_color} </p>
                   <p>Skin Color: {details.skin_color} </p>
-                  <p>Films: {details.films}</p>
-
-                  <ul>
-                      {
-                      details.name.map(detail =>  <li>{detail}</li>)
-                      }
-                  </ul>
                 </>
-
               }
               <button onClick={close}>Close</button>
           </StyledDetails>
