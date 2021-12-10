@@ -80,11 +80,17 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+React JS is a user interface library that is used for building applications. Facebook created it to solve the issue of complex state. They needed a way to manage huge amounts of data without bogging down the DOM or web browser. Everything created through React is a component, therefore it is scalable and reusable and allows us to update/render just the components who have changed.
 
 2. Describe component state.
 
+Component state is an object used by React to represent the component's current situation. This data (state) can be displayed to the screen for users. When the state changes, the component re-renders and shows the current state to the screen.
 
 3. Describe props.
 
+Props are arguments that are passed into React components. They are also how we can pass data from one component to another as parameters. Props are always passed from the parent to the child. We cannot make changes to props data - it is read-only. This ensure the data flow remains clean.
+
 
 4. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+Side effects are anything that could affect the component outside of the function being called. To manage side effects and avoid bugs and inconsistencies in the app, we can use the effect hook. The useEffect() hook allows us to set states along with the useState() hook.
